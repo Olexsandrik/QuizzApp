@@ -20,7 +20,7 @@
 	"biome.formatter": { "enabled": true },
 	"biome.organizeImports": { "enabled": true },
 
-	// 📂 Ігноруємо непотрібні файли
+	 📂 Ігноруємо непотрібні файли
 	"biome.files.exclude": [
 		"node_modules",
 		"dist",

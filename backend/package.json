@@ -3,11 +3,11 @@
 	"version": "0.0.0",
 	"type": "module",
 	"scripts": {
-		"build": "ts-node ./scripts/build.ts",
+		"build": "tsx ./scripts/build.ts",
 		"clean-install": "rm -rf ./node_modules && rm -r package-lock.json && npm i",
-		"dev": "NODE_ENV=development ts-node src/server.ts",
+		"dev": "NODE_ENV=development tsx src/server.ts",
 		"dev:hot": "nodemon --exec \"npm run dev\" --watch ./src --ext .ts",
-		"server": "nodemon --exec \"NODE_ENV=development ts-node\" src/server.ts --watch ./src --ext .ts",
+		"server": "nodemon --exec \"NODE_ENV=development tsx\" src/server.ts --watch ./src --ext .ts",
 		"lint": "eslint .",
 		"start": "NODE_ENV=production node -r ./config.js ./dist",
 		"test": "NODE_ENV=test vitest",
@@ -19,6 +19,7 @@
 	"dependencies": {
 		"@prisma/adapter-pg": "^5.22.0",
 		"@prisma/client": "^5.22.0",
+		"cors": "^2.8.5",
 		"dotenv": "^17.2.3",
 		"express": "^4.18.2",
 		"pg": "^8.16.3"
