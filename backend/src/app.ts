@@ -1,10 +1,13 @@
-import express, { type Express } from "express";
+import type { Request, Response } from "express";
+import express from "express";
+import router from "./routes/route.js";
 
-const app: Express = express();
+const app = express();
 
 app.use(express.json());
 
-app.get("/health", (_, res) => {
+app.use("/users", router);
+app.get("/health", (req: Request, res: Response) => {
 	res.json({ status: "ok" });
 });
 
