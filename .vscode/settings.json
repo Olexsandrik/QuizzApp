@@ -1,0 +1,41 @@
+{
+	// 🔧 Cursor-specific settings
+	"telemetry.feedback.enabled": false,
+	"cursor.cmdk.useThemedDiffBackground2": true,
+	"cursor.inlineDiff.enablePerformanceProtection": true,
+	"diffEditor.codeLens": false,
+	"diffEditor.diffAlgorithm": "advanced",
+	"diffEditor.experimental.showEmptyDecorations": false,
+	"diffEditor.experimental.showMoves": false,
+
+	// ✨ Biome — головний форматер
+	"editor.defaultFormatter": "biomejs.biome",
+	"editor.formatOnSave": true,
+	"editor.formatOnPaste": true,
+	"editor.formatOnType": true,
+
+	// 🧠 Активуємо лінтер Biome
+	"biome.enabled": true,
+	"biome.linter": { "enabled": true },
+	"biome.formatter": { "enabled": true },
+	"biome.organizeImports": { "enabled": true },
+
+	// 📂 Ігноруємо непотрібні файли
+	"biome.files.exclude": [
+		"node_modules",
+		"dist",
+		"build",
+		"generated",
+		"frontend/dist",
+		"prisma/schema.prisma"
+	],
+
+	// 🚫 Вимикаємо інші лінтери (щоб не було конфліктів)
+	"eslint.enable": false,
+	"prettier.enable": false,
+
+	// ⚙️ Автоматично впорядковує імпорти при збереженні
+	"editor.codeActionsOnSave": {
+		"source.organizeImports.biome": "explicit"
+	}
+}
